@@ -130,6 +130,7 @@ main a {
 
 
 h2 {
+    display: inline;
     font-family: 'Inder';
     font-style: normal;
     font-weight: 400;
@@ -150,4 +151,33 @@ main li {
     font-size: 16px;
     line-height: 25px;
     color: #75E6DA;
+}
+
+@media screen and (max-width: 480px) {
+    nav {
+        text-align: center;
+    }
+
+   .btresume {
+        margin-right: 0px;
+   } 
+
+   main {
+       width: 100%;
+       margin: 100px 5%;
+   }
+
+   .presentation {
+       margin: 0px 5%;
+
+   }
+
+   .textme {
+       width: 100%;
+   }
+
+   .aboutme {
+       width: auto;
+   }
+
 }
