@@ -299,6 +299,7 @@ body.menu-expanded button {
 #about .about-me {
   padding: 2.4rem;
   text-align: justify;
+  text-justify: inter-word;
 
   border: 1px solid var(--green);
   border-radius: 0.6rem;
