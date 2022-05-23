@@ -37,15 +37,33 @@ body {
 
 body {
   font-family: 'Inter';
-  font-size: 1.4rem;
-  overflow: overlay;
-  background: var(--dark);
+  font-size: 1.6rem;
+  line-height: 150%;
+
   color: var(--slate);
+  
+  overflow: overlay;
+  
+  background: var(--dark);
+  
+}
+h1 {
+  font-weight: 700;
+  font-size: 3.4rem;
+  color: var(--light-slate-2);
+  line-height: 150%;
+
+  margin-block: 1.6rem;
 }
 
-p {
-  line-height: 150%;
-  font-size: 1.4rem;
+h3 {
+  color: var(--green);
+  margin-block: 1.6rem;
+}
+
+h4 {
+  color: var(--green);
+  margin-bottom: 1.4rem;
 }
 
 ul {
@@ -66,44 +84,14 @@ ul {
   gap: 3.2rem;
 }
 
-section {
-  padding-block: 10rem;
-}
-
-section header h4 {
-  color: var(--green);
-
-  line-height: 150%;
-}
-
-section header h2 {
-  font-size: 3rem;
-
-  color: var(--headline-2);
-}
-
 .my-name {
-  font-size: 3.4rem;
-  font-weight: 700;
-  margin-block: 1.4rem;
-
+  
   color: var(--light-slate-2);
+  margin-block: 0;
 }
-
 .my-pro {
-  font-size: 3.4rem;
-  font-weight: 700;
-
-  margin-bottom: 1.4rem;
-
   color: var(--light-slate);
-}
-
-section .content p {
-  line-height: 150%;
-  margin-bottom: 1.4rem;
-
-  color: var(--headline);
+  margin-block: 0;
 }
 
 nav {
@@ -135,14 +123,29 @@ nav button {
 }
 
 nav .menu li a {
+  font-size: 2.4rem;
+  font-weight: 700;
   text-decoration: none;
-  color: var(--headline-3);
+  color: var(--slate);
 }
 
 nav .menu,
 nav .close-menu {
   position: fixed;
   text-align: center;
+}
+
+/* Keep distance 10rem between nav and sections  */
+section {
+  padding-top: 10rem;
+}
+
+header {
+  margin-bottom: 2.4rem;
+}
+
+.menu {
+  transform: translateX(-100%);
 }
 
 body.menu-expanded {
@@ -164,10 +167,6 @@ body.menu-expanded .open-menu {
 body.menu-expanded .menu,
 body.menu-expanded .close-menu {
   visibility: visible;
-}
-
-.menu {
-  transform: translateX(-100%);
 }
 
 body.menu-expanded .menu {
@@ -196,10 +195,6 @@ body.menu-expanded .menu {
   line-height: 3.1rem;
 }
 
-.menu ul li a {
-  color: var(--slate);
-  text-decoration: none;
-}
 
 body.menu-expanded .logo,
 body.menu-expanded button {
@@ -234,19 +229,8 @@ body.menu-expanded button {
   transition: 500ms;
 }
 
-#navigation .logo path[fill*='#00856F'],
-#backToTopButton circle {
-  fill: var(--brand-green);
-}
-
 #home {
-  padding-block: 0;
   padding-top: calc(10rem + var(--nav-height));
-}
-
-#home p {
-  line-height: 150%;
-  margin-bottom: 3.2rem;
 }
 
 #home .stats {
@@ -256,9 +240,8 @@ body.menu-expanded button {
   gap: 4rem;
 
   width: 100%;
-  margin-inline: auto;
-  margin-top: 24rem;
-  padding-block: 4rem;
+  margin: 24rem auto 10rem;
+  padding-block: 6rem;
 
   border: 1px solid var(--green);
   border-radius: 0.6rem;
@@ -269,49 +252,17 @@ body.menu-expanded button {
   font-weight: 700;
 
   color: var(--green);
-  line-height: 130%;
-
-  margin-bottom: 0.4rem;
-}
-
-#home .stat p {
-  margin: 0;
-  font-size: 1.6rem;
-  font-weight: 400;
   line-height: 150%;
 }
 
-#skills h1 {
-  font-size: 3.4rem;
-  font-weight: 700;
 
-  text-align: center;
-  margin-block: 4rem;
-
-  color: var(--light-slate-2);
+#skills {
+  margin-bottom: 10rem;
 }
 
-#skills h3 {
-  color: var(--green);
-  margin-block: 1.6rem;
-}
-
-#skills p {
-  font-size: 1.6rem;
-  line-height: 150%;
-}
-
-#skills a {
+#skills .skill a {
   text-decoration: none;
   color: var(--green);
-}
-
-#skills .my-skills {
-  display: flex;
-  flex-direction: column;
-
-  margin-inline: auto;
-  gap: 3.2rem;
 }
 
 #skills .skill {
@@ -320,6 +271,35 @@ body.menu-expanded button {
 
   border: 1px solid var(--green);
   border-radius: 0.6rem;
+
+  margin-bottom: 3.2rem;
+}
+
+#experiences {
+  margin-bottom: 10rem;
+}
+
+#experiences .experience {
+  padding: 2.4rem;
+  text-align: left;
+
+  border: 1px solid var(--green);
+  border-radius: 0.6rem;
+  margin-bottom: 3.2rem;
+}
+
+#about {
+  margin-bottom: 10rem;
+}
+
+#about .about-me {
+  padding: 2.4rem;
+  text-align: justify;
+  border: 1px solid var(--green);
+}
+
+#backToTopButton circle {
+  fill: none;
 }
 
 #backToTopButton {
@@ -343,8 +323,4 @@ body.menu-expanded button {
 footer {
   text-align: center;
   padding-block: 6rem;
-
-  margin-block: 6rem;
-
-  border-top: 1px solid var(--green);
 }
