@@ -41,11 +41,10 @@ body {
   line-height: 150%;
 
   color: var(--slate);
-  
+
   overflow: overlay;
-  
+
   background: var(--dark);
-  
 }
 h1 {
   font-weight: 700;
@@ -93,7 +92,6 @@ ul {
 }
 
 .my-name {
-  
   color: var(--light-slate-2);
   margin-block: 0;
 }
@@ -203,7 +201,6 @@ body.menu-expanded .menu {
   line-height: 3.1rem;
 }
 
-
 body.menu-expanded .logo,
 body.menu-expanded button {
   position: relative;
@@ -263,7 +260,6 @@ body.menu-expanded button {
   line-height: 150%;
 }
 
-
 #skills {
   margin-bottom: 10rem;
 }
@@ -303,7 +299,9 @@ body.menu-expanded button {
 #about .about-me {
   padding: 2.4rem;
   text-align: justify;
+
   border: 1px solid var(--green);
+  border-radius: 0.6rem;
 }
 
 #backToTopButton circle {
