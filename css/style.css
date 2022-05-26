@@ -230,7 +230,7 @@ body.menu-expanded button {
 }
 
 .btn-contact:hover {
-  background-color: var(--dark-2);
+  background-color: var(--green-hover);
   transition: 500ms;
 }
 
@@ -330,4 +330,162 @@ body.menu-expanded button {
 footer {
   text-align: center;
   padding-block: 6rem;
+}
+
+@media (min-width: 1024px) {
+  body {
+    overflow: auto;
+
+    font-size: 1.8rem;
+  }
+
+  h1 {
+    font-size: 5.2rem;
+  }
+
+  h2 {
+    font-size: 4.7rem;
+  }
+  .wrapper {
+    width: min(112rem, 100%);
+    display: grid;
+  }
+
+  section {
+    padding-block: 16rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+    line-height: 5.2rem;
+  }
+
+  .col-a {
+    grid-area: A;
+    width: 50%;
+  }
+
+  .col-b {
+    grid-area: B;
+    width: 50%;
+  }
+
+  nav#navigation .wrapper * {
+    margin: 0;
+    padding: 0;
+    visibility: initial;
+    display: initial;
+    opacity: initial;
+    flex-direction: initial;
+    position: initial;
+    font-size: initial;
+    font-weight: initial;
+    transform: initial;
+    color: initial;
+    background-color: initial;
+    filter: initial;
+  }
+
+  /* Hide mobile menu */
+  nav#navigation .close-menu,
+  nav#navigation .open-menu,
+  nav#navigation .social-links {
+    display: none;
+  }
+
+  nav#navigation .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Take the first list on menu */
+  nav#navigation .menu ul:nth-child(1) {
+    display: flex;
+    gap: 3.2rem;
+  }
+
+  nav#navigation .menu ul li a {
+    color: var(--green);
+  }
+
+  nav#navigation .menu a.button {
+    border: 1px solid var(--green);
+    border-radius: 0.6rem;
+    padding: 1.6rem 3.2rem;
+    width: fit-content;
+
+    color: var(--green);
+
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+
+  nav#navigation .menu a:hover {
+    opacity: 0.5;
+    transition: 500ms;
+  }
+
+  nav#navigation .menu a.button:hover {
+    background-color: var(--green-hover);
+    transition: 500ms;
+  }
+
+  #home {
+    padding-top: calc(16rem + var(--nav-height));
+  }
+
+  #home .wrapper .skill {
+    grid-template-areas: 'A B';
+  }
+
+  /*
+  #home .stats {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+
+    gap: 6rem;
+  
+    width: 75%;
+    margin: 24rem auto 10rem;
+    padding-block: 6rem;
+  
+    border: 1px solid var(--green);
+    border-radius: 0.6rem;
+  }
+  */
+
+  #skills .my-skills {
+    display: flex;
+    gap: 3.2rem;
+  }
+
+  #skills .skill {
+    height: 18rem;
+  }
+
+  #experiences .wrapper .experience {
+    grid-template-areas: 'A B';
+  }
+
+  #experiences .my-experience {
+    display: flex;
+    gap: 3.2rem;
+  }
+
+  #experiences .experience {
+    height: 20rem;
+  }
+
+  footer {
+    padding-block: 8rem;
+  }
+
+  footer .wrapper {
+    display: flex;
+    grid-template-areas: 'A B';
+  }
 }
